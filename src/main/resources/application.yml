@@ -1,19 +1,23 @@
 spring:
     application:
         name: flexshop
+    config:
+        import: "optional:dotenv:"
 
     datasource:
-        url: ${DB_URL}
-        username: ${DB_USERNAME}
-        password: ${DB_PASSWORD}
+        url: ${DB_URL:jdbc:postgresql://localhost:5432/flexshop_db}
+        username: ${DB_USERNAME:flexteck}
+        password: ${DB_PASSWORD:akaka1na5}
+        driver-class-name: ${DB_DRIVER_CLASS_NAME:org.postgresql.Driver}
 
     jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
         hibernate:
             ddl-auto: update
         show-sql: true
         properties:
             hibernate:
-                format_sql:true
+                format_sql: true
 
 server:
     port: 8080
