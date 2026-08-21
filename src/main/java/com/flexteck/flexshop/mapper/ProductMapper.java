@@ -4,7 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 import com.flexteck.flexshop.dto.response.ProductResponse;
-import com.flexteck.flexshop.model.Product;
+import com.flexteck.flexshop.entity.Product;
 
 @Mapper(componentModel = "spring")
 public interface ProductMapper {

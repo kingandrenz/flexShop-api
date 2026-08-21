@@ -1,4 +1,4 @@
-package com.flexteck.flexshop.model;
+package com.flexteck.flexshop.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

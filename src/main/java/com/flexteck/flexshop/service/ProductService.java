@@ -5,10 +5,10 @@ import com.flexteck.flexshop.exception.DuplicateResourceException;
 import com.flexteck.flexshop.exception.ResourceNotFoundException;
 import com.flexteck.flexshop.mapper.ProductMapper;
 import com.flexteck.flexshop.dto.response.ProductResponse;
+import com.flexteck.flexshop.entity.Category;
+import com.flexteck.flexshop.entity.Product;
 import com.flexteck.flexshop.repository.CategoryRepository;
 import com.flexteck.flexshop.repository.ProductRepository;
-import com.flexteck.flexshop.model.Category;
-import com.flexteck.flexshop.model.Product;
 
 import java.util.List;
 

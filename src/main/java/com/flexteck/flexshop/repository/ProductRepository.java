@@ -2,7 +2,8 @@ package com.flexteck.flexshop.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.flexteck.flexshop.model.Product;
+import com.flexteck.flexshop.entity.Product;
+
 import java.util.List;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {

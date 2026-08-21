@@ -2,7 +2,7 @@ package com.flexteck.flexshop.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.flexteck.flexshop.model.Category;
+import com.flexteck.flexshop.entity.Category;
 
 public interface CategoryRepository extends JpaRepository<Category, Long> {
     boolean existsByNameIgnoreCase(String name);

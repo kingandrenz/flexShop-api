@@ -6,9 +6,9 @@ import java.util.List;
 
 import com.flexteck.flexshop.dto.request.CategoryRequest;
 import com.flexteck.flexshop.dto.response.CategoryResponse;
+import com.flexteck.flexshop.entity.Category;
 import com.flexteck.flexshop.exception.DuplicateResourceException;
 import com.flexteck.flexshop.exception.ResourceNotFoundException;
-import com.flexteck.flexshop.model.Category;
 import com.flexteck.flexshop.mapper.CategoryMapper;
 import com.flexteck.flexshop.repository.CategoryRepository;
 

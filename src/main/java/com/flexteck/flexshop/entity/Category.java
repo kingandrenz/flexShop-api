@@ -1,4 +1,4 @@
-package com.flexteck.flexshop.model;
+package com.flexteck.flexshop.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
