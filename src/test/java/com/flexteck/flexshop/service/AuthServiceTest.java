@@ -33,11 +33,14 @@ class AuthServiceTest {
     @Mock
     private PasswordEncoder passwordEncoder;
 
+    @Mock
+    private JwtService jwtService;
+
     private AuthService authService;
 
     @BeforeEach
     void setUp() {
-        authService = new AuthService(appUserRepository, passwordEncoder);
+        authService = new AuthService(appUserRepository, passwordEncoder, jwtService);
     }
 
     @Test
