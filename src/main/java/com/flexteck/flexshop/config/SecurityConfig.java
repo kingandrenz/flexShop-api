@@ -1,6 +1,5 @@
 package com.flexteck.flexshop.config;
 
-import org.springframework.boot.autoconfigure.graphql.GraphQlProperties.Http;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -70,6 +69,12 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/categories/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/api/categories/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE, "/api/categories/**").hasRole("ADMIN")
+
+                        // User-createOrder management endpoint
+                        .requestMatchers(HttpMethod.POST, "/api/orders/**").hasAnyRole("USER", "ADMIN")
+
+                        // Admin-only order management endpoints
+                        .requestMatchers(HttpMethod.GET, "/api/admin/orders/**").hasRole("ADMIN")
 
                         // Everything else requires login
                         .anyRequest().authenticated())
